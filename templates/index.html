@@ -4,8 +4,8 @@
 
 {% block title %}Home{% endblock title %} {% block head %}
 
-<link rel="stylesheet" href="/static/css/indexStyle.css" />
-<link rel="stylesheet" href="/static/css/responsive.css" />
+<link rel="stylesheet" href="{% static '/css/indexStyle.css' %}">
+<link rel="stylesheet" href="{% static '/css/responsive.css' %}">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 {% endblock head %} {% block main %}
@@ -21,7 +21,7 @@
   </div>
   <div class="home-container">
     <div id="main-container" class="container">
-      <h2 class="c-head">Click to choose, Who is best?</h2>
+      <h2 class="c-head">Click to choose, Who is the best?</h2>
 
       <form id="us-form" method="POST">
         {% csrf_token %}
@@ -46,32 +46,13 @@
         <button type="submit">Submit</button>
     </form>
 
-      {% comment %} <div class="c-sub">
-        <img
-          class="c-sub-img competitor1"
-          src="{{ competitor1.image.url }}"
-          alt="{{ competitor1.name }}"
-        />
-        <p class="c-head">{{ competitor1.name }}</p>
-      </div>
 
-      <span id="c-span">OR</span>
-
-      <div class="c-sub" id="c-2">
-        <img
-          class="c-sub-img competitor2"
-          src="{{ competitor2.image.url }}"
-          alt="{{ competitor2.name }}"
-        />
-
-        <p class="c-head">{{ competitor2.name }}</p>
-      </div> {% endcomment %}
     </div>
   </div>
 </main>
 
 {% endblock main %} {% block script %}
 
-<script src="/static/js/index.js"></script>
+<script src="{% static '/js/index.js' %}"></script>
 
 {% endblock script %}
