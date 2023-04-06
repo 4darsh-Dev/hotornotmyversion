@@ -7,9 +7,9 @@
 
 {% block head %}
 
-<link rel="stylesheet" href="/static/css/indexStyle.css">
-<link rel="stylesheet" href="/static/css/responsive.css">
-<link rel="stylesheet" href="/static/css/about.css">
+<link rel="stylesheet" href="{% static '/css/indexStyle.css' %}">
+<link rel="stylesheet" href="{% static '/css/responsive.css' %}">
+<link rel="stylesheet" href="{% static '/css/about.css' %}">
 
 {% endblock head %}
 
@@ -21,9 +21,6 @@
     <p id="about-para">
         Search Results 
     </p>
-   
-
-
 
 
 </main>
@@ -33,7 +30,7 @@
 
 {% block script %}
 
-<script src="/static/js/remain.js">
+<script src="{% static '/js/remain.js' %}">
 
 </script>
 
